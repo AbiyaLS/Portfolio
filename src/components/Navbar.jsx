@@ -9,7 +9,6 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
   const navItems = [
     { name: "Home", link: "#home" },
     { name: "About", link: "#about" },
-    { name: "Skills", link: "#skills" },
     { name: "Projects", link: "#projects" },
     { name: "Contact", link: "#contact" },
   ];
@@ -41,12 +40,13 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="flex-1 flex items-center justify-between 
+        className={`flex-1 flex items-center justify-between 
                    bg-white/10 dark:bg-black/15 
                    backdrop-blur-lg 
                    px-5 py-3 
                    rounded-full 
-                   shadow-lg border border-white/10"
+                   shadow-md border border-white/10
+                   ${darkMode ? "shadow-blue-950" : "shadow-orange-400"}`}
       >
 
         {/* Logo */}

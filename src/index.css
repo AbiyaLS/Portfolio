@@ -12,6 +12,9 @@
   html {
     scroll-behavior: smooth;
   }
+  section {
+  scroll-margin-top: 100px;
+}
 
   body {
     font-family: 'Inter', sans-serif ;
@@ -37,12 +40,12 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: #4245fe;
+    background-color: #ff8c09;
     border-radius: 10px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #5052f0;
+    background-color: #ff8c09;
   }
 
   /* Hide scrollbar for Chrome, Safari and Opera */

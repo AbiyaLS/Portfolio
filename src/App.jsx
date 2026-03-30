@@ -1,26 +1,18 @@
-import React, { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import About from "./components/About";
+import Projects from "./components/Project";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(true);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: false,
-      offset: 100,
-    });
-    document.documentElement.classList.add("dark");
-  }, []);
 
   const toggleDarkMode = () => {
     const newMode = !darkMode;
     setDarkMode(newMode);
     document.documentElement.classList.toggle("dark");
   };
+
   return (
     <div
       className={
@@ -30,10 +22,10 @@ const App = () => {
       }
     >
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      
-        <Hero darkMode={darkMode}/>
 
-      
+      <Hero darkMode={darkMode} />
+      <About darkMode={darkMode} />
+       <Projects darkMode={darkMode} />
     </div>
   );
 };
