@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import hero from "../assests/hero.png";
+import hero from "../assets/hero.png";
 
 export default function Hero({ darkMode }) {
   const lightColors = {
