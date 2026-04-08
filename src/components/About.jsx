@@ -21,7 +21,7 @@ export default function About({ darkMode }) {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center px-4 sm:px-6 md:px-20 scroll-mt-24"
+      className="min-h-[90vh] flex items-center px-4 sm:px-6 md:px-20 scroll-mt-24"
     >
       <div className="grid md:grid-cols-2 gap-10 md:gap-16 max-w-6xl mx-auto w-full">
 

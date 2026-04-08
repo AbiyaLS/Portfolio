@@ -1,9 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import projects from "../data/projectData.js";
+import projects from "../data/ProjectData";
 
 export default function Projects({ darkMode = true }) {
-
   const theme = darkMode
     ? {
         textPrimary: "text-white",
@@ -21,28 +20,25 @@ export default function Projects({ darkMode = true }) {
       };
 
   return (
-    <section className="min-h-screen px-6 md:px-20 py-16 scroll-mt-24">
+    <section id="projects" className="min-h-[80vh] px-6 md:px-20 py-14 scroll-mt-24">
       <div className="max-w-6xl mx-auto">
-
         {/* HEADING */}
-        <h2 className={`text-4xl font-bold text-center ${theme.textPrimary}`}>
+        <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold text-left ${theme.textPrimary}`}>
           My Projects
         </h2>
 
         {/* GRID */}
         <div className="grid md:grid-cols-2 gap-8 mt-12">
           {projects.map((project, index) => (
-            
             <motion.div
               key={index}
               className={`rounded-2xl border ${theme.card} 
-              shadow-md shadow-orange-400/20 hover:shadow-orange-400/40 
+              shadow-md shadow-orange-400/20 hover:shadow-orange-400/40 hover:shadow-lg
               transition duration-300`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-
               {/* IMAGE */}
               <div className="w-full h-52 flex items-center justify-center bg-black/30 rounded-t-2xl">
                 <img
@@ -54,7 +50,6 @@ export default function Projects({ darkMode = true }) {
 
               {/* CONTENT */}
               <div className="p-5">
-
                 <h3 className={`text-xl font-semibold ${theme.textPrimary}`}>
                   {project.title}
                 </h3>
@@ -76,21 +71,35 @@ export default function Projects({ darkMode = true }) {
                 </div>
 
                 {/* LIVE LINK */}
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`inline-block mt-5 text-sm font-medium ${theme.accent} hover:underline`}
-                >
-                  View Live →
-                </a>
+                <div className="flex gap-4 mt-5">
+                  {/* LIVE BUTTON */}
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`text-sm font-medium ${theme.accent} hover:underline`}
+                    >
+                      Live Demo →
+                    </a>
+                  )}
 
+                  {/* GITHUB BUTTON */}
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`text-sm font-medium ${theme.accent} hover:underline`}
+                    >
+                      GitHub →
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.div>
-
           ))}
         </div>
-
       </div>
     </section>
   );

@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Projects from "./components/Project";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -26,6 +28,8 @@ const App = () => {
       <Hero darkMode={darkMode} />
       <About darkMode={darkMode} />
        <Projects darkMode={darkMode} />
+       <Contact  darkMode={darkMode} />
+       <Footer darkMode={darkMode} />
     </div>
   );
 };
