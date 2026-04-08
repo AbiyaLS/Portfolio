@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import projects from "../data/ProjectData";
+import projects from "../configs/projectData.js";
 
 export default function Projects({ darkMode = true }) {
   const theme = darkMode
