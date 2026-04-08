@@ -1,8 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, Instagram, Linkedin, MessageCircle } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import linkedin from "../assets/linkedin.png";
-import github from "../assets/github.png";
 import whatsapp from "../assets/whatsapp.png";
 import cv from "../assets/AbiyaLS.pdf"
 
@@ -54,18 +53,7 @@ export default function Contact({ darkMode = true }) {
                   className="w-8 h-8 cursor-pointer hover:scale-110 transition"
                 />
               </a>
-              {/* <Linkedin className="cursor-pointer text-blue-500 hover:scale-110 transition" /> */}
-              {/* <a
-                href="https://github.com/YOUR_USERNAME"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={github}
-                  alt="GitHub"
-                  className="w-8 h-8 cursor-pointer hover:scale-110 transition"
-                />
-              </a> */}
+             
               <a
                 href="https://wa.me/917736581960"
                 target="_blank"
