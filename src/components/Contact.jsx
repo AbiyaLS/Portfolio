@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
 import linkedin from "../assets/linkedin.png";
 import whatsapp from "../assets/whatsapp.png";
-import cv from "../assets/AbiyaLS.pdf"
+import cv from "../assets/AbiyaLS .pdf"
 
 export default function Contact({ darkMode = true }) {
   const theme = darkMode
